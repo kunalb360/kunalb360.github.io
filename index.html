@@ -1,9 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Greetings</title>
+    <title>is this thing on? ...</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+        body {
+            background-image: url('notebook_paper.jpeg');
+            background-repeat: repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .quote {
+            font-family: 'Homemade Apple', cursive;
+            text-align: center;
+            font-size: 50px;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hi</h1>
+    <div class="container">
+        <h1 class="quote">"O brave new world, That has such people in it!"</h1>
+    </div>
 </body>
 </html>
