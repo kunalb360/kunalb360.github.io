@@ -26,48 +26,35 @@
             object-fit: contain;
         }
 
-        .corner-link {
+        .self-link {
             position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+            font-family: 'Times New Roman', Times, serif;
             font-size: 24px;
             color: #000;
             text-decoration: none;
-            padding: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            white-space: nowrap;
         }
 
-        .corner-link::before {
-            content: '> ';
+        /* lay out as "the self" (same as index.html) so "self" lands in the
+           exact same spot; "the higher" is right-aligned to the hidden "the"
+           and extends to the left */
+        .lead {
+            position: relative;
         }
 
-        .corner-link::after {
-            content: '_';
-            animation: blink 1s step-end infinite;
+        .lead .ghost {
+            visibility: hidden;
         }
 
-        .corner-link:hover {
-            color: #00ff00;
-            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
-        }
-
-        .top-left {
-            top: 0;
-            left: 0;
-        }
-
-        .top-right {
+        .lead .real {
+            position: absolute;
             top: 0;
             right: 0;
-        }
-
-        .bottom-left {
-            bottom: 0;
-            left: 0;
-        }
-
-        .bottom-right {
-            bottom: 0;
-            right: 0;
+            white-space: nowrap;
         }
 
         @keyframes blink {
@@ -129,10 +116,7 @@
 <body>
     <div class="scanlines"></div>
 
-    <a href="https://github.com/kunalb360" class="corner-link top-left">github</a>
-    <a href="https://linkedin.com/in/kunalbhatt360" class="corner-link top-right">linkedin</a>
-    <a href="reading-list.html" class="corner-link bottom-left">reading list</a>
-    <a href="#" class="corner-link bottom-right">substack</a>
+    <a href="the-self.html" class="self-link"><span class="lead"><span class="ghost">the</span><span class="real">the higher</span></span> self</a>
 
     <img src="resources/mudboy_motif.png" alt="mudboy motif">
 </body>
